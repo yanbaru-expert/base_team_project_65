@@ -9,6 +9,10 @@ class TasksController < ApplicationController
     Task.create(task_params)
   end
 
+  def index
+    @tasks = Task.all
+  end
+
 
   private
   def task_params
