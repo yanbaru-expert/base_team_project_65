@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
   def index
     @messages = Message.all
   end
-  
+
   def new
     @message = Message.new
   end
@@ -11,6 +11,11 @@ class MessagesController < ApplicationController
   def create
     Message.create(message_params)
   end
+
+  def destroy
+    message = Message.find(params[:id])
+    message.destroy
+  end  
 
   private
   def message_params
