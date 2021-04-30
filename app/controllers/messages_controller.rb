@@ -29,8 +29,10 @@ class MessagesController < ApplicationController
     message.destroy
   end  
 
-  private
+ private
   def message_params
     params.require(:message).permit(:title, :contents)
-  end
+   end
+ end
 end
+
