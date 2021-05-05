@@ -4,6 +4,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_151921) do
   
   enable_extension "plpgsql"
 
+HEAD
   create_table "messages", force: :cascade do |t|
     t.string "title"
     t.integer "contents"
