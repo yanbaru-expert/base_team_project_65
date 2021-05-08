@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
   
   def create
     Message.create(message_params)
-   end
+   end　
 
   def show
     @message = Message.find(params[:id])
