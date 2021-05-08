@@ -1,6 +1,7 @@
-<p>更新</p>
+<p>メッセージ編集</p>
 <%= form_with model: @message, local: true do |f| %>
   <p>タイトル：<%= f.text_field :title %></p>
   <p>内容：<%= f.text_field :contents %></p>
-  <%input type="submit" value="送信">
+  <%= f.submit "送信" %>
 <% end %>
+ss

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
- HEAD
-  resources :message
+  resources :messages
   resources :tasks
   resources :users
 
