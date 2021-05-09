@@ -7,14 +7,14 @@ class MessagesController < ApplicationController
   def new
     @message = Message.new
   end
-  
+
   def create
     Message.create(message_params)
-   end　
+  end
 
   def show
     @message = Message.find(params[:id])
-  end  
+  end
 
   def edit
     @message = Message.find(params[:id])
@@ -23,16 +23,18 @@ class MessagesController < ApplicationController
   def update
     message = Message.find(params[:id])
     message.update(message_params)
+  end
 
   def destroy
     message = Message.find(params[:id])
     message.destroy
-
-  end  
-
- private
-  def message_params
-    params.require(:message).permit(:title, :contents)
-   end
+  
   end
+
+  
+  private
+    def message_params
+      params.require(:message).permit(:title, :contens)
+    end
 end
+
